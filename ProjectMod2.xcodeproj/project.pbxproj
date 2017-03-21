@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B5382E581E80DB4E00AAD087 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5382E571E80DB4E00AAD087 /* AppDelegate.swift */; };
-		B5382E5A1E80DB4E00AAD087 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5382E591E80DB4E00AAD087 /* ViewController.swift */; };
 		B5382E5D1E80DB4E00AAD087 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5382E5B1E80DB4E00AAD087 /* Main.storyboard */; };
 		B5382E5F1E80DB4E00AAD087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5382E5E1E80DB4E00AAD087 /* Assets.xcassets */; };
 		B5382E621E80DB4E00AAD087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5382E601E80DB4E00AAD087 /* LaunchScreen.storyboard */; };
 		B5382E6D1E80DB4E00AAD087 /* ProjectMod2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5382E6C1E80DB4E00AAD087 /* ProjectMod2Tests.swift */; };
 		B5382E781E80DB4E00AAD087 /* ProjectMod2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5382E771E80DB4E00AAD087 /* ProjectMod2UITests.swift */; };
+		B5382E881E80DE5B00AAD087 /* ProductCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5382E871E80DE5B00AAD087 /* ProductCollectionViewController.swift */; };
+		B5382E8A1E80E70B00AAD087 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5382E891E80E70B00AAD087 /* Product.swift */; };
+		B5382E8E1E80F0ED00AAD087 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5382E8D1E80F0ED00AAD087 /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		B5382E541E80DB4E00AAD087 /* ProjectMod2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMod2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5382E571E80DB4E00AAD087 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5382E591E80DB4E00AAD087 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5382E5C1E80DB4E00AAD087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5382E5E1E80DB4E00AAD087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5382E611E80DB4E00AAD087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		B5382E731E80DB4E00AAD087 /* ProjectMod2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectMod2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5382E771E80DB4E00AAD087 /* ProjectMod2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMod2UITests.swift; sourceTree = "<group>"; };
 		B5382E791E80DB4E00AAD087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5382E871E80DE5B00AAD087 /* ProductCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewController.swift; sourceTree = "<group>"; };
+		B5382E891E80E70B00AAD087 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B5382E8D1E80F0ED00AAD087 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		B5382E561E80DB4E00AAD087 /* ProjectMod2 */ = {
 			isa = PBXGroup;
 			children = (
+				B5382E8C1E80F0C100AAD087 /* adapter */,
+				B5382E861E80DDF600AAD087 /* model */,
+				B5382E851E80DDE700AAD087 /* view */,
 				B5382E571E80DB4E00AAD087 /* AppDelegate.swift */,
-				B5382E591E80DB4E00AAD087 /* ViewController.swift */,
 				B5382E5B1E80DB4E00AAD087 /* Main.storyboard */,
 				B5382E5E1E80DB4E00AAD087 /* Assets.xcassets */,
 				B5382E601E80DB4E00AAD087 /* LaunchScreen.storyboard */,
@@ -123,6 +129,30 @@
 				B5382E791E80DB4E00AAD087 /* Info.plist */,
 			);
 			path = ProjectMod2UITests;
+			sourceTree = "<group>";
+		};
+		B5382E851E80DDE700AAD087 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B5382E871E80DE5B00AAD087 /* ProductCollectionViewController.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		B5382E861E80DDF600AAD087 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B5382E891E80E70B00AAD087 /* Product.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		B5382E8C1E80F0C100AAD087 /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				B5382E8D1E80F0ED00AAD087 /* ProductCollectionViewCell.swift */,
+			);
+			name = adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5382E5A1E80DB4E00AAD087 /* ViewController.swift in Sources */,
+				B5382E881E80DE5B00AAD087 /* ProductCollectionViewController.swift in Sources */,
 				B5382E581E80DB4E00AAD087 /* AppDelegate.swift in Sources */,
+				B5382E8E1E80F0ED00AAD087 /* ProductCollectionViewCell.swift in Sources */,
+				B5382E8A1E80E70B00AAD087 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Y4G2QFLKB7;
 				INFOPLIST_FILE = ProjectMod2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -428,6 +461,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Y4G2QFLKB7;
 				INFOPLIST_FILE = ProjectMod2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,6 +548,7 @@
 				B5382E7E1E80DB4E00AAD087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5382E7F1E80DB4E00AAD087 /* Build configuration list for PBXNativeTarget "ProjectMod2Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +557,7 @@
 				B5382E811E80DB4E00AAD087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5382E821E80DB4E00AAD087 /* Build configuration list for PBXNativeTarget "ProjectMod2UITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +566,7 @@
 				B5382E841E80DB4E00AAD087 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
